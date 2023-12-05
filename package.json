@@ -1,0 +1,34 @@
+{
+  "name": "booking-travel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm run install-client && npm run install-admin && npm run install-server",
+    "install-client": "cd bk-client && npm install",
+    "install-admin": "cd bk-admin && npm install",
+    "install-server": "cd bk-api && npm install",
+    "client": "npm start --prefix bk-client",
+    "admin": "npm start --prefix bk-admin",
+    "server": "npm start --prefix bk-api",
+    "start": "concurrently -n \"client,admin,server\" --kill-others-on-fail -c \"red,green,yellow\" \" npm run client\" \" npm run admin\" \" npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kienpro10082002/TravelBooking.git"
+  },
+  "keywords": [
+    "nodejs",
+    "restapi",
+    "react"
+  ],
+  "author": "kienpro vjetgolang hunglam quangminh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kienpro10082002/TravelBooking/issues"
+  },
+  "homepage": "https://github.com/Kienpro10082002/TravelBooking#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
